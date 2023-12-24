@@ -7,7 +7,6 @@ def backupData(source, destination):
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     backupFolder = f"backup_{timestamp}"
     try:
-        # Copy the contents of the source folder to the backup folder
         shutil.copytree(source, f"{destination}/{backupFolder}")
         print(f"backup completed successfully to {destination}/{backupFolder}")
     except Exception as e:
